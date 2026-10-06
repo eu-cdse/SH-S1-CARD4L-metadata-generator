@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "name": "100km grid",
+  "properties": {
+    "tileWidth": 100080.0,
+    "tileHeight": 100080.0,
+    "chunkWidth": 278,
+    "chunkHeight": 278,
+    "resolutions": [
+      360.0,
+      60.0,
+      120.0,
+      240.0
+    ],
+    "unit": "METRE"
+  }
+}

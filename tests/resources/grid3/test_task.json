@@ -1,0 +1,204 @@
+{
+  "id": "cc3f8473-e390-4535-aa66-fea5fe2b7507",
+  "request": {
+    "instanceType": "normal",
+    "processRequest": {
+      "input": {
+        "bounds": {
+          "geometry": {
+            "type": "MultiPolygon",
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:OGC::CRS84"
+              }
+            },
+            "coordinates": [
+              [
+                [
+                  [
+                    35.711229561712464,
+                    -6.058698
+                  ],
+                  [
+                    35.73147404297318,
+                    -6.145016020128968
+                  ],
+                  [
+                    35.77077278390264,
+                    -6.326404617283627
+                  ],
+                  [
+                    35.807204748275694,
+                    -6.508434370197243
+                  ],
+                  [
+                    35.845251067286505,
+                    -6.690110848033291
+                  ],
+                  [
+                    35.88444159405269,
+                    -6.871537796732254
+                  ],
+                  [
+                    35.922011839979106,
+                    -7.053329824853835
+                  ],
+                  [
+                    35.95529794070479,
+                    -7.182651
+                  ],
+                  [
+                    36.19540018887309,
+                    -7.182651
+                  ],
+                  [
+                    36.517026427048435,
+                    -7.111215542860622
+                  ],
+                  [
+                    36.985455,
+                    -7.006587716472772
+                  ],
+                  [
+                    36.985455,
+                    -6.058698
+                  ],
+                  [
+                    35.711229561712464,
+                    -6.058698
+                  ]
+                ]
+              ],
+              [
+                [
+                  [
+                    36.1966770346227,
+                    -7.182651
+                  ],
+                  [
+                    36.985455,
+                    -7.182651
+                  ],
+                  [
+                    36.985455,
+                    -7.0068699442824185
+                  ],
+                  [
+                    36.51708239025167,
+                    -7.111485401048877
+                  ],
+                  [
+                    36.1966770346227,
+                    -7.182651
+                  ]
+                ]
+              ]
+            ]
+          },
+          "properties": {
+            "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"
+          }
+        },
+        "data": [
+          {
+            "dataFilter": {
+              "timeRange": {
+                "from": "2020-09-24T15:54:35Z",
+                "to": "2020-09-24T15:55:01Z"
+              },
+              "mosaickingOrder": "mostRecent",
+              "maxCloudCoverage": 100.0,
+              "resolution": "HIGH",
+              "acquisitionMode": "IW",
+              "polarization": "DV"
+            },
+            "processing": {
+              "backCoeff": "GAMMA0_TERRAIN",
+              "orthorectify": true,
+              "demInstance": "COPERNICUS",
+              "downsampling": "BILINEAR",
+              "upsampling": "BILINEAR"
+            },
+            "type": "S1GRD"
+          }
+        ]
+      },
+      "output": {
+        "responses": [
+          {
+            "identifier": "VV",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "VH",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "AREA",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "ANGLE",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "MASK",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "userdata",
+            "format": {
+              "type": "application/json"
+            },
+            "logo": false
+          }
+        ]
+      },
+      "evalscript": "//VERSION=3\nfunction setup() {\n  return {\n    input: [{bands:[\"VV\", \"VH\", \"ILLUMINATED_AREA\", \"INCIDENCE_ANGLE\", \"dataMask\"], metadata: [\"bounds\"]}],\n    output: [\n      {\n      id: \"VV\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"VH\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"AREA\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"ANGLE\",\n      bands: 1,\n      sampleType: \"UINT8\"\n      },{\n      id: \"MASK\",\n      bands: 1,\n      sampleType: \"UINT8\"\n      }\n    ]\n  };\n}\n\nfunction evaluatePixel(samples) {\n  return {\n    VV: [samples.VV],\n    VH: [samples.VH],\n    AREA: [samples.ILLUMINATED_AREA],\n    ANGLE: [samples.dataMask == 0 ? 255 : samples.INCIDENCE_ANGLE],\n    MASK: [samples.dataMask]\n  };\n}\n\nfunction updateOutputMetadata(scenes, inputMetadata, outputMetadata) {\n  outputMetadata.userData = {\"tiles\": scenes.tiles};\n}\n\n"
+    },
+    "input": {
+      "type": "tiling-grid",
+      "id": 3,
+      "resolution": 0.0002
+    },
+    "output": {
+      "delivery": {
+        "s3": {
+          "url": "s3://deafrica-sentinel-1/s1_rtc/<tileName>/2020/09/24/0403DE/s1_rtc_0403DE_<tileName>_2020_09_24_<outputId>.<format>",
+          "accessKey": "*****",
+          "secretAccessKey": "<REDACTED>",
+          "region": "eu-central-1"
+        }
+      },
+      "type": "raster",
+      "cogOutput": true,
+      "createCollection": false
+    },
+    "description": "card4l-test card4lId: 170fde91-7f25-43f3-a447-9631c65f59c6"
+  },
+  "domainAccountId": "e024f6e1-4545-444d-9caf-4382962aad4e",
+  "projectId": "ffe4e816-f9f9-4f64-b7cf-0ea4d57317cf",
+  "status": "DONE",
+  "userAction": "START",
+  "userActionUpdated": "2025-08-14T14:02:47.848281Z",
+  "created": "2020-11-27T09:17:48.414Z",
+  "completionPercentage": 100,
+  "lastUpdated": "2025-08-14T14:30:46.716642Z",
+  "costPU": 9006.923884650554
+}

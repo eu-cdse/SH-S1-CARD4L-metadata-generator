@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "name": "WGS84 1 degree grid",
+  "properties": {
+    "tileWidth": 1.0,
+    "tileHeight": 1.0,
+    "resolutions": [
+      1.0E-4,
+      2.0E-4
+    ],
+    "unit": "DEGREE"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "6aa8765a-e9eb-4dd0-a567-b86cfdb840e0",
+  "request": {
+    "instanceType": "normal",
+    "processRequest": {
+      "input": {
+        "bounds": {
+          "geometry": {
+            "type": "Polygon",
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "urn:ogc:def:crs:OGC::CRS84"
+              }
+            },
+            "coordinates": [
+              [
+                [
+                  36.165,
+                  -6.774
+                ],
+                [
+                  36.166,
+                  -6.774
+                ],
+                [
+                  36.166,
+                  -6.773
+                ],
+                [
+                  36.165,
+                  -6.773
+                ],
+                [
+                  36.165,
+                  -6.774
+                ]
+              ]
+            ]
+          },
+          "properties": {
+            "crs": "http://www.opengis.net/def/crs/EPSG/0/4326"
+          }
+        },
+        "data": [
+          {
+            "dataFilter": {
+              "timeRange": {
+                "from": "2021-08-14T15:55:04Z",
+                "to": "2021-08-14T15:55:05Z"
+              },
+              "mosaickingOrder": "mostRecent",
+              "maxCloudCoverage": 100.0,
+              "resolution": "HIGH",
+              "acquisitionMode": "IW",
+              "polarization": "DV"
+            },
+            "processing": {
+              "backCoeff": "GAMMA0_TERRAIN",
+              "orthorectify": true,
+              "demInstance": "COPERNICUS_30",
+              "downsampling": "BILINEAR",
+              "upsampling": "BILINEAR"
+            },
+            "type": "S1GRD"
+          }
+        ]
+      },
+      "output": {
+        "responses": [
+          {
+            "identifier": "VV",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "VH",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "AREA",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "ANGLE",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "MASK",
+            "format": {
+              "type": "image/tiff"
+            },
+            "logo": false
+          },
+          {
+            "identifier": "userdata",
+            "format": {
+              "type": "application/json"
+            },
+            "logo": false
+          }
+        ]
+      },
+      "evalscript": "//VERSION=3\nfunction setup() {\n  return {\n    input: [{bands:[\"VV\", \"VH\", \"ILLUMINATED_AREA\", \"INCIDENCE_ANGLE\", \"dataMask\"], metadata: [\"bounds\"]}],\n    output: [\n      {\n      id: \"VV\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"VH\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"AREA\",\n      bands: 1,\n      sampleType: \"FLOAT32\"\n      },{\n      id: \"ANGLE\",\n      bands: 1,\n      sampleType: \"UINT8\"\n      },{\n      id: \"MASK\",\n      bands: 1,\n      sampleType: \"UINT8\"\n      }\n    ]\n  };\n}\n\nfunction evaluatePixel(samples) {\n  return {\n    VV: [samples.VV],\n    VH: [samples.VH],\n    AREA: [samples.ILLUMINATED_AREA],\n    ANGLE: [samples.dataMask == 0 ? 255 : samples.INCIDENCE_ANGLE],\n    MASK: [samples.dataMask]\n  };\n}\n\nfunction updateOutputMetadata(scenes, inputMetadata, outputMetadata) {\n  outputMetadata.userData = {\"tiles\": scenes.tiles};\n}\n\n"
+    },
+    "input": {
+      "type": "tiling-grid",
+      "id": 2,
+      "bufferY": 10,
+      "bufferX": 5,
+      "resolution": 360.0
+    },
+    "output": {
+      "delivery": {
+        "s3": {
+          "url": "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/<tileName>/2021/08/14/04A19A/s1_rtc_04A19A_<tileName>_2021_08_14_<outputId>.<format>",
+          "accessKey": "*****",
+          "secretAccessKey": "<REDACTED>",
+          "region": "eu-central-1"
+        }
+      },
+      "type": "raster",
+      "overwrite": true,
+      "skipExisting": false,
+      "cogOutput": true,
+      "createCollection": false
+    },
+    "description": "card4l-test card4lId: 170fde91-7f25-43f3-a447-9631c65f59c6"
+  },
+  "domainAccountId": "e024f6e1-4545-444d-9caf-4382962aad4e",
+  "projectId": "ffe4e816-f9f9-4f64-b7cf-0ea4d57317cf",
+  "status": "DONE",
+  "userAction": "START",
+  "userActionUpdated": "2025-08-14T14:02:47.848281Z",
+  "created": "2021-08-17T12:02:12.306339Z",
+  "completionPercentage": 100,
+  "lastUpdated": "2025-08-14T14:30:46.716642Z",
+  "costPU": 9006.923884650554
+}

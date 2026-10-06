@@ -1,0 +1,206 @@
+{
+  "stac_version": "1.0.0-beta.2",
+  "stac_extensions": [
+    "sat",
+    "sar",
+    "proj"
+  ],
+  "id": "N06E006_2026_08_06_011985",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.0,
+          7.0
+        ],
+        [
+          7.0,
+          7.0
+        ],
+        [
+          7.0,
+          6.0
+        ],
+        [
+          6.0,
+          6.0
+        ],
+        [
+          6.0,
+          7.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    6.0,
+    6.0,
+    7.0,
+    7.0
+  ],
+  "properties": {
+    "datetime": "2026-08-06T05:20:28.732598Z",
+    "start_datetime": "2026-08-06T05:20:28.732598Z",
+    "end_datetime": "2026-08-06T05:21:18.731351Z",
+    "platform": "sentinel-1c",
+    "instruments": [
+      "c-sar"
+    ],
+    "constellation": "sentinel-1",
+    "proj:epsg": 4326,
+    "odc:region_code": "N06E006",
+    "odc:product": "s1_rtc",
+    "odc:processing_datetime": "2026-09-04T11:15:38.123663Z",
+    "sar:instrument_mode": "IW",
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "sar:product_type": "RTC",
+    "sar:observation_direction": "right",
+    "sat:orbit_state": "descending",
+    "sat:relative_orbit": 22,
+    "sat:absolute_orbit": 8870
+  },
+  "assets": {
+    "vv": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_VV.tif",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_VV",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "polarization VV",
+      "roles": [
+        "data"
+      ],
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        0.0002,
+        0.0,
+        6.0,
+        0.0,
+        -0.0002,
+        7.0
+      ],
+      "sar:polarizations": [
+        "VV"
+      ]
+    },
+    "vh": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_VH.tif",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_VH",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "polarization VH",
+      "roles": [
+        "data"
+      ],
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        0.0002,
+        0.0,
+        6.0,
+        0.0,
+        -0.0002,
+        7.0
+      ],
+      "sar:polarizations": [
+        "VH"
+      ]
+    },
+    "area": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_AREA.tif",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_AREA",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "normalized scattering area",
+      "roles": [
+        "data"
+      ],
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        0.0002,
+        0.0,
+        6.0,
+        0.0,
+        -0.0002,
+        7.0
+      ]
+    },
+    "angle": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_ANGLE.tif",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_ANGLE",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "local incidence angle",
+      "roles": [
+        "data"
+      ],
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        0.0002,
+        0.0,
+        6.0,
+        0.0,
+        -0.0002,
+        7.0
+      ]
+    },
+    "mask": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_MASK.tif",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_MASK",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "data mask",
+      "roles": [
+        "data"
+      ],
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        0.0002,
+        0.0,
+        6.0,
+        0.0,
+        -0.0002,
+        7.0
+      ]
+    },
+    "metadata": {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_metadata.xml",
+      "title": "s1_rtc_011985_N06E006_2026_08_06_metadata",
+      "type": "application/xml",
+      "roles": [
+        "metadata",
+        "card4l"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "s3://output_bucket/s1_rtc/N06E006/2026/08/06/011985/s1_rtc_011985_N06E006_2026_08_06_metadata.json",
+      "rel": "self",
+      "type": "application/json"
+    },
+    {
+      "href": "s3://sentinel-s1-l1c/GRD/2026/8/6/IW/DV/S1C_IW_GRDH_1SDV_20260806T052053_20260806T052118_008870_011985_A9BC",
+      "rel": "derived_from"
+    },
+    {
+      "href": "s3://sentinel-s1-l1c/GRD/2026/8/6/IW/DV/S1C_IW_GRDH_1SDV_20260806T052028_20260806T052053_008870_011985_5C84",
+      "rel": "derived_from"
+    }
+  ]
+}

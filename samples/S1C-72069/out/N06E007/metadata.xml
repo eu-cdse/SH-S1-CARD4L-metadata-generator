@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Product type="Normalized Radar Backscatter" version="5.5">
+  <DocumentIdentifier type="URL">https://ceos.org/ard/files/PFS/NRB/v5.5/CARD4L-PFS_NRB_v5.5.pdf</DocumentIdentifier>
+  <DataCollectionTime>
+    <NumberOfAcquisitions>2</NumberOfAcquisitions>
+    <FirstAcquisitionDate>2026-08-06T05:20:28.732598Z</FirstAcquisitionDate>
+    <LastAcquisitionDate>2026-08-06T05:21:18.731351Z</LastAcquisitionDate>
+  </DataCollectionTime>
+  <SourceAttributes acqID="1">
+    <SourceDataRepository type="URL">s3://sentinel-s1-l1c/GRD/2026/8/6/IW/DV/S1C_IW_GRDH_1SDV_20260806T052053_20260806T052118_008870_011985_A9BC</SourceDataRepository>
+    <Satellite>Sentinel-1C</Satellite>
+    <SatelliteReference type="URL">http://database.eohandbook.com/database/missionsummary.aspx?missionID=577</SatelliteReference>
+    <ProductDefinitionReference type="URL">https://sentinel.esa.int/documents/247904/1877131/Sentinel-1-Product-Definition</ProductDefinitionReference>
+    <Instrument>Synthetic Aperture Radar</Instrument>
+    <SensorCalibration type="URL">https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-1-sar/sar-instrument/calibration</SensorCalibration>
+    <SourceDataAcquisitionTime>
+      <StartTime>2026-08-06T05:20:53.732719Z</StartTime>
+      <EndTime>2026-08-06T05:21:18.731351Z</EndTime>
+    </SourceDataAcquisitionTime>
+    <SourceDataAcquisitionParameters>
+      <RadarBand>C</RadarBand>
+      <RadarCenterFrequency units="Hz">5.40500045433435E9</RadarCenterFrequency>
+      <ObservationMode>IW</ObservationMode>
+      <Polarizations>VV VH</Polarizations>
+      <AntennaPointing>Right</AntennaPointing>
+      <BeamID>TOPS</BeamID>
+    </SourceDataAcquisitionParameters>
+    <OrbitInformation>
+      <PassDirection>DESCENDING</PassDirection>
+      <OrbitDataSource>RESORB</OrbitDataSource>
+      <OrbitDataFileName>S1C_OPER_AUX_RESORB_OPOD_20260806T065323_V20260806T025424_20260806T063404.EOF</OrbitDataFileName>
+      <PlatformHeading units="deg">191.9819290948749</PlatformHeading>
+      <OrbitMeanAltitude units="m">693000</OrbitMeanAltitude>
+    </OrbitInformation>
+    <SourceProcParam>
+      <ProcessingFacility>S1C-PS</ProcessingFacility>
+      <ProcessingDate>2026-08-06T07:19:27.198071Z</ProcessingDate>
+      <SoftwareVersion>Sentinel-1 IPF, 004.03</SoftwareVersion>
+      <ProductID>S1C_IW_GRDH_1SDV_20260806T052053_20260806T052118_008870_011985_A9BC</ProductID>
+      <ProductLevel>GRD</ProductLevel>
+      <AzimuthNumberOfLooks>1</AzimuthNumberOfLooks>
+      <RangeNumberOfLooks>5</RangeNumberOfLooks>
+      <AzimuthLookBandwidth units="Hz">
+        <Beam ID="IW1">327.0</Beam>
+        <Beam ID="IW2">313.0</Beam>
+        <Beam ID="IW3">314.0</Beam>
+      </AzimuthLookBandwidth>
+      <RangeLookBandwidth units="Hz">
+        <Beam ID="IW1">1.41E7</Beam>
+        <Beam ID="IW2">1.21E7</Beam>
+        <Beam ID="IW3">1.07E7</Beam>
+      </RangeLookBandwidth>
+    </SourceProcParam>
+    <SourceDataImageAttributes>
+      <SourceGeographicalExtent order="longitude latitude" type="WKT">
+                POLYGON ((7.415011814293763 6.638346103176345, 6.865494878834411 6.751745525463479, 6.306459808435498 6.866416700877284, 5.748378448971626 6.980182465269349, 5.193871615674415 7.092507007317695, 5.122648969237552 6.730131618765813, 5.085635458871377 6.549172786305779, 5.049792740469571 6.367969845641690, 4.977097237282739 6.005751857840306, 4.891783069681564 5.583985012640937, 6.000141182572017 5.355666769689834, 7.108167400548397 5.125218562875728, 7.231071767211707 5.730045487284995, 7.268492433789696 5.911598266429624, 7.306528664939909 6.093020337742284, 7.339045110685539 6.275587743879361, 7.378526202409489 6.456704026462682, 7.415011814293763 6.638346103176345))
+            </SourceGeographicalExtent>
+      <SourceDataGeometry>Ground range</SourceDataGeometry>
+      <AzimuthPixelSpacing units="m">10.0</AzimuthPixelSpacing>
+      <RangePixelSpacing units="m">10.0</RangePixelSpacing>
+      <AzimuthResolution units="m">
+        <Beam ID="IW1">22.5</Beam>
+        <Beam ID="IW2">22.6</Beam>
+        <Beam ID="IW3">22.6</Beam>
+      </AzimuthResolution>
+      <RangeResolution units="m">
+        <Beam ID="IW1">20.4</Beam>
+        <Beam ID="IW2">20.3</Beam>
+        <Beam ID="IW3">20.5</Beam>
+      </RangeResolution>
+      <IncAngleNearRange units="deg">30.76866</IncAngleNearRange>
+      <IncAngleFarRange units="deg">45.98305477892436</IncAngleFarRange>
+    </SourceDataImageAttributes>
+    <PerformanceIndicators pol="VV">
+      <NoiseReference type="URL">https://sentinel.esa.int/documents/247904/2142675/Thermal-Denoising-of-Products-Generated-by-Sentinel-1-IPF</NoiseReference>
+      <NoiseEquivalentIntensity type="Sigma0" units="dB">
+        <Estimates type="min">-30</Estimates>
+        <Estimates type="max">-22</Estimates>
+      </NoiseEquivalentIntensity>
+      <EquivalentNumberOfLooks>4.4</EquivalentNumberOfLooks>
+      <PeakSideLobeRatio units="dB" direction="range">-21.2</PeakSideLobeRatio>
+      <PeakSideLobeRatio units="dB" direction="azimuth">-21.2</PeakSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="range">-16.1</IntegratedSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="azimuth">-16.1</IntegratedSideLobeRatio>
+    </PerformanceIndicators>
+    <PerformanceIndicators pol="VH">
+      <NoiseReference type="URL">https://sentinel.esa.int/documents/247904/2142675/Thermal-Denoising-of-Products-Generated-by-Sentinel-1-IPF</NoiseReference>
+      <NoiseEquivalentIntensity type="Sigma0" units="dB">
+        <Estimates type="min">-30</Estimates>
+        <Estimates type="max">-22</Estimates>
+      </NoiseEquivalentIntensity>
+      <EquivalentNumberOfLooks>4.4</EquivalentNumberOfLooks>
+      <PeakSideLobeRatio units="dB" direction="range">-21.2</PeakSideLobeRatio>
+      <PeakSideLobeRatio units="dB" direction="azimuth">-21.2</PeakSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="range">-16.1</IntegratedSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="azimuth">-16.1</IntegratedSideLobeRatio>
+    </PerformanceIndicators>
+  </SourceAttributes>
+  <SourceAttributes acqID="2">
+    <SourceDataRepository type="URL">s3://sentinel-s1-l1c/GRD/2026/8/6/IW/DV/S1C_IW_GRDH_1SDV_20260806T052028_20260806T052053_008870_011985_5C84</SourceDataRepository>
+    <Satellite>Sentinel-1C</Satellite>
+    <SatelliteReference type="URL">http://database.eohandbook.com/database/missionsummary.aspx?missionID=577</SatelliteReference>
+    <ProductDefinitionReference type="URL">https://sentinel.esa.int/documents/247904/1877131/Sentinel-1-Product-Definition</ProductDefinitionReference>
+    <Instrument>Synthetic Aperture Radar</Instrument>
+    <SensorCalibration type="URL">https://sentinel.esa.int/web/sentinel/technical-guides/sentinel-1-sar/sar-instrument/calibration</SensorCalibration>
+    <SourceDataAcquisitionTime>
+      <StartTime>2026-08-06T05:20:28.732598Z</StartTime>
+      <EndTime>2026-08-06T05:20:53.731230Z</EndTime>
+    </SourceDataAcquisitionTime>
+    <SourceDataAcquisitionParameters>
+      <RadarBand>C</RadarBand>
+      <RadarCenterFrequency units="Hz">5.40500045433435E9</RadarCenterFrequency>
+      <ObservationMode>IW</ObservationMode>
+      <Polarizations>VV VH</Polarizations>
+      <AntennaPointing>Right</AntennaPointing>
+      <BeamID>TOPS</BeamID>
+    </SourceDataAcquisitionParameters>
+    <OrbitInformation>
+      <PassDirection>DESCENDING</PassDirection>
+      <OrbitDataSource>RESORB</OrbitDataSource>
+      <OrbitDataFileName>S1C_OPER_AUX_RESORB_OPOD_20260806T065323_V20260806T025424_20260806T063404.EOF</OrbitDataFileName>
+      <PlatformHeading units="deg">191.994139217488</PlatformHeading>
+      <OrbitMeanAltitude units="m">693000</OrbitMeanAltitude>
+    </OrbitInformation>
+    <SourceProcParam>
+      <ProcessingFacility>S1C-PS</ProcessingFacility>
+      <ProcessingDate>2026-08-06T07:20:48.709442Z</ProcessingDate>
+      <SoftwareVersion>Sentinel-1 IPF, 004.03</SoftwareVersion>
+      <ProductID>S1C_IW_GRDH_1SDV_20260806T052028_20260806T052053_008870_011985_5C84</ProductID>
+      <ProductLevel>GRD</ProductLevel>
+      <AzimuthNumberOfLooks>1</AzimuthNumberOfLooks>
+      <RangeNumberOfLooks>5</RangeNumberOfLooks>
+      <AzimuthLookBandwidth units="Hz">
+        <Beam ID="IW1">327.0</Beam>
+        <Beam ID="IW2">313.0</Beam>
+        <Beam ID="IW3">314.0</Beam>
+      </AzimuthLookBandwidth>
+      <RangeLookBandwidth units="Hz">
+        <Beam ID="IW1">1.41E7</Beam>
+        <Beam ID="IW2">1.21E7</Beam>
+        <Beam ID="IW3">1.07E7</Beam>
+      </RangeLookBandwidth>
+    </SourceProcParam>
+    <SourceDataImageAttributes>
+      <SourceGeographicalExtent order="longitude latitude" type="WKT">
+                POLYGON ((7.729285221539535 8.150038912574045, 7.171498439525955 8.263926586556682, 6.613931273003820 8.376921818762549, 6.051374444995251 8.490062783129158, 5.496620397203653 8.600769399236635, 5.424776290713226 8.238618358774138, 5.387804244376285 8.057697350492793, 5.351662392243632 7.876604590040468, 5.314113103726488 7.695789434680527, 5.242205440258022 7.333499951229348, 5.193871615674415 7.092507007317695, 5.748378448971626 6.980182465269349, 6.306459808435498 6.866416700877284, 6.865494878834411 6.751745525463479, 7.415011814293763 6.638346103176345, 7.429467170586329 6.697979830373364, 7.543617161553303 7.242199907344061, 7.617873357472709 7.605382735190948, 7.693916996958443 7.968188352733853, 7.729285221539535 8.150038912574045))
+            </SourceGeographicalExtent>
+      <SourceDataGeometry>Ground range</SourceDataGeometry>
+      <AzimuthPixelSpacing units="m">10.0</AzimuthPixelSpacing>
+      <RangePixelSpacing units="m">10.0</RangePixelSpacing>
+      <AzimuthResolution units="m">
+        <Beam ID="IW1">22.5</Beam>
+        <Beam ID="IW2">22.6</Beam>
+        <Beam ID="IW3">22.6</Beam>
+      </AzimuthResolution>
+      <RangeResolution units="m">
+        <Beam ID="IW1">20.4</Beam>
+        <Beam ID="IW2">20.3</Beam>
+        <Beam ID="IW3">20.5</Beam>
+      </RangeResolution>
+      <IncAngleNearRange units="deg">30.80626</IncAngleNearRange>
+      <IncAngleFarRange units="deg">46.01274</IncAngleFarRange>
+    </SourceDataImageAttributes>
+    <PerformanceIndicators pol="VV">
+      <NoiseReference type="URL">https://sentinel.esa.int/documents/247904/2142675/Thermal-Denoising-of-Products-Generated-by-Sentinel-1-IPF</NoiseReference>
+      <NoiseEquivalentIntensity type="Sigma0" units="dB">
+        <Estimates type="min">-30</Estimates>
+        <Estimates type="max">-22</Estimates>
+      </NoiseEquivalentIntensity>
+      <EquivalentNumberOfLooks>4.4</EquivalentNumberOfLooks>
+      <PeakSideLobeRatio units="dB" direction="range">-21.2</PeakSideLobeRatio>
+      <PeakSideLobeRatio units="dB" direction="azimuth">-21.2</PeakSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="range">-16.1</IntegratedSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="azimuth">-16.1</IntegratedSideLobeRatio>
+    </PerformanceIndicators>
+    <PerformanceIndicators pol="VH">
+      <NoiseReference type="URL">https://sentinel.esa.int/documents/247904/2142675/Thermal-Denoising-of-Products-Generated-by-Sentinel-1-IPF</NoiseReference>
+      <NoiseEquivalentIntensity type="Sigma0" units="dB">
+        <Estimates type="min">-30</Estimates>
+        <Estimates type="max">-22</Estimates>
+      </NoiseEquivalentIntensity>
+      <EquivalentNumberOfLooks>4.4</EquivalentNumberOfLooks>
+      <PeakSideLobeRatio units="dB" direction="range">-21.2</PeakSideLobeRatio>
+      <PeakSideLobeRatio units="dB" direction="azimuth">-21.2</PeakSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="range">-16.1</IntegratedSideLobeRatio>
+      <IntegratedSideLobeRatio units="dB" direction="azimuth">-16.1</IntegratedSideLobeRatio>
+    </PerformanceIndicators>
+  </SourceAttributes>
+  <CARD4LProductAttributes>
+    <DataAccess>
+      <ProcessingFacility>Sentinel Hub, Sinergise</ProcessingFacility>
+      <ProcessingTime>2026-09-04T11:15:26.917507Z</ProcessingTime>
+      <SoftwareVersion>Batch API, v5.289.1</SoftwareVersion>
+      <Repository type="URL">s3://output_bucket/s1_rtc/N06E007/2026/08/06/011985</Repository>
+    </DataAccess>
+    <AncillaryData DEM="Copernicus DEM, GLO-30, release 2021" EGM="EGM2008, 1x1 minute grid in WGS84"/>
+    <ProductSampleSpacing>
+      <ProductColumnSpacing units="deg">2.0E-4</ProductColumnSpacing>
+      <ProductRowSpacing units="deg">2.0E-4</ProductRowSpacing>
+    </ProductSampleSpacing>
+    <Filtering>
+      <FilterApplied>true</FilterApplied>
+      <FilterType>block average</FilterType>
+      <WindowSizeCol>2</WindowSizeCol>
+      <WindowSizeLine>2</WindowSizeLine>
+    </Filtering>
+    <ProductBoundingBox corner="UL">
+      <Latitude units="deg">7.0</Latitude>
+      <Longitude units="deg">7.0</Longitude>
+    </ProductBoundingBox>
+    <ProductBoundingBox corner="LR">
+      <Latitude units="deg">6.0</Latitude>
+      <Longitude units="deg">8.0</Longitude>
+    </ProductBoundingBox>
+    <ProductGeographicalExtent order="longitude latitude" type="WKT">
+            POLYGON ((7.429467170586329 6.697979830373364, 7.415011814293763 6.638346103176343, 7.378526202409489 6.456704026462682, 7.339045110685539 6.275587743879361, 7.306528664939909 6.093020337742284, 7.287026390258353 6.000000000000000, 7.000000000000000 6.000000000000000, 7.000000000000000 7.000000000000000, 7.492815806723803 7.000000000000000, 7.429467170586329 6.697979830373364))
+        </ProductGeographicalExtent>
+    <ProductImageSize>
+      <NumberLines>5000</NumberLines>
+      <NumPixelsPerLine>5000</NumPixelsPerLine>
+    </ProductImageSize>
+    <PixelCoordinateConvention>pixel centre</PixelCoordinateConvention>
+    <CoordinateReferenceSystem type="EPSG">4326</CoordinateReferenceSystem>
+    <CoordinateReferenceSystem type="WKT">GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]        </CoordinateReferenceSystem>
+    <PerPixelMetadata>
+      <DataMask>
+        <FileName>s1_rtc_011985_N06E007_2026_08_06_MASK.tif</FileName>
+        <SampleType>Mask</SampleType>
+        <DataFormat>geotiff</DataFormat>
+        <NoDataValue>0</NoDataValue>
+        <DataType>UINT</DataType>
+        <BitsPerSample>8</BitsPerSample>
+        <ByteOrder>Little Endian</ByteOrder>
+        <BitValues>
+          <NoData>0</NoData>
+          <ValidData>1</ValidData>
+          <InvalidData>2</InvalidData>
+        </BitValues>
+      </DataMask>
+      <LocalContributingArea>
+        <FileName>s1_rtc_011985_N06E007_2026_08_06_AREA.tif</FileName>
+        <SampleType units="square_meters/square_meters">Normalized Scattering Area</SampleType>
+        <DataFormat>geotiff</DataFormat>
+        <NoDataValue>nan</NoDataValue>
+        <DataType>FLOAT</DataType>
+        <BitsPerSample>32</BitsPerSample>
+        <ByteOrder>Little Endian</ByteOrder>
+      </LocalContributingArea>
+      <LocalIncAngle>
+        <FileName>s1_rtc_011985_N06E007_2026_08_06_ANGLE.tif</FileName>
+        <SampleType units="deg">Angle</SampleType>
+        <DataFormat>geotiff</DataFormat>
+        <NoDataValue>255</NoDataValue>
+        <DataType>UINT</DataType>
+        <BitsPerSample>8</BitsPerSample>
+        <ByteOrder>Little Endian</ByteOrder>
+      </LocalIncAngle>
+    </PerPixelMetadata>
+    <BackscatterMeasurementData>
+      <BackscatterMeasurement>Gamma-0</BackscatterMeasurement>
+      <BackscatterConvention>linear power</BackscatterConvention>
+      <BackscatterConversionEq units="dB">10*log10(DN)</BackscatterConversionEq>
+      <Polarization>VV</Polarization>
+      <FileName>s1_rtc_011985_N06E007_2026_08_06_VV.tif</FileName>
+      <DataFormat>geotiff</DataFormat>
+      <DataType>FLOAT</DataType>
+      <BitsPerSample>32</BitsPerSample>
+      <ByteOrder>Little Endian</ByteOrder>
+    </BackscatterMeasurementData>
+    <BackscatterMeasurementData>
+      <BackscatterMeasurement>Gamma-0</BackscatterMeasurement>
+      <BackscatterConvention>linear power</BackscatterConvention>
+      <BackscatterConversionEq units="dB">10*log10(DN)</BackscatterConversionEq>
+      <Polarization>VH</Polarization>
+      <FileName>s1_rtc_011985_N06E007_2026_08_06_VH.tif</FileName>
+      <DataFormat>geotiff</DataFormat>
+      <DataType>FLOAT</DataType>
+      <BitsPerSample>32</BitsPerSample>
+      <ByteOrder>Little Endian</ByteOrder>
+    </BackscatterMeasurementData>
+    <NoiseRemoval>
+      <NoiseRemovalApplied>true</NoiseRemovalApplied>
+      <NRAlgorithm type="URL">https://sentinel.esa.int/web/sentinel/radiometric-calibration-of-level-1-products</NRAlgorithm>
+    </NoiseRemoval>
+    <RadiometricTerrainCorrections>
+      <RTCAlgorithm type="URL">https://doi.org/10.1109/TGRS.2011.2120616</RTCAlgorithm>
+      <DEMOversamplingFactor>2.0</DEMOversamplingFactor>
+    </RadiometricTerrainCorrections>
+    <RadiometricAccuracy>
+      <RadAccuracyReference type="URL">https://sentinel.esa.int/documents/247904/1877131/Sentinel-1-Product-Definition</RadAccuracyReference>
+      <Absolute units="dB" confidence="3σ">1</Absolute>
+      <Relative units="dB" confidence="3σ">0.1</Relative>
+    </RadiometricAccuracy>
+    <GeometricCorrection>
+      <DigitalElevationModel dem="Surface">
+        <DEMReference type="URL">https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model</DEMReference>
+        <DEMType>GLO-30, release 2021</DEMType>
+        <DEMResamplingMethod>BILINEAR</DEMResamplingMethod>
+        <EGMReference type="URL">https://earth-info.nga.mil/index.php?dir=wgs84&amp;action=wgs84#egm2008</EGMReference>
+        <EGMType>EGM2008, 1x1 minute grid in WGS84</EGMType>
+        <EGMResamplingMethod>BILINEAR</EGMResamplingMethod>
+      </DigitalElevationModel>
+      <GeoCorrMethod>Range Doppler Terrain Correction</GeoCorrMethod>
+      <GeoCorrAlgorithm type="URL">https://sentinel.esa.int/documents/247904/1653442/Guide-to-Sentinel-1-Geocoding.pdf</GeoCorrAlgorithm>
+      <GeoCorrAccuracy type="GTC">
+        <rRMSE units="m">4.4</rRMSE>
+        <rRMSE units="samples">0.2</rRMSE>
+        <NorthernBias units="m">-0.2</NorthernBias>
+        <NorthernSTDev units="m">0.5</NorthernSTDev>
+        <EasternBias units="m">-4.4</EasternBias>
+        <EasternSTDev units="m">0.5</EasternSTDev>
+        <GeoAccuracyReference type="URL">https://ieeexplore.ieee.org/document/9554039</GeoAccuracyReference>
+      </GeoCorrAccuracy>
+      <ResamplingMethod>BILINEAR</ResamplingMethod>
+    </GeometricCorrection>
+    <GriddingConvention type="URL">https://docs.planet.com/develop/apis/batch-processing/#1-tiling-grid</GriddingConvention>
+    <GridName>WGS84 1 degree grid</GridName>
+  </CARD4LProductAttributes>
+</Product>

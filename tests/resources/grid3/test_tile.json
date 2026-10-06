@@ -1,0 +1,50 @@
+{
+  "id": 38963,
+  "geometry": {
+    "type": "Polygon",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:EPSG::4326"
+      }
+    },
+    "coordinates": [
+      [
+        [
+          36.0,
+          -8.0
+        ],
+        [
+          36.0,
+          -7.0
+        ],
+        [
+          37.0,
+          -7.0
+        ],
+        [
+          37.0,
+          -8.0
+        ],
+        [
+          36.0,
+          -8.0
+        ]
+      ]
+    ]
+  },
+  "origin": {
+    "type": "Point",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "urn:ogc:def:crs:EPSG::4326"
+      }
+    },
+    "coordinates": [
+      36.0,
+      -7.0
+    ]
+  },
+  "name": "S08E036"
+}

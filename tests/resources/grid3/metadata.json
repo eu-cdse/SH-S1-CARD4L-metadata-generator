@@ -1,0 +1,98 @@
+{
+  "stac_version" : "1.0.0-beta.2",
+  "id" : "S08E036_2020_09_24_0403DE",
+  "geometry" : {
+    "type" : "Polygon",
+    "coordinates" : [[[36.146519243558075,-8.0],[37.0,-8.0],[37.0,-7.0],[36.0,-7.0],[36.0,-7.354001233593059],[36.03237742108735,-7.471785645475776],[36.10807578791101,-7.835279865415697],[36.146519243558075,-8.0]]]
+  },
+  "bbox" : [ 36.0, -8.0, 37.0, -7.0 ],
+  "stac_extensions" : [ "sat", "sar", "proj" ],
+  "type" : "Feature",
+  "properties" : {
+    "datetime" : "2020-09-24T15:54:35.768961Z",
+    "sar:frequency_band" : "C",
+    "sat:relative_orbit" : 130,
+    "start_datetime" : "2020-09-24T15:54:35.768961Z",
+    "end_datetime" : "2020-09-24T15:55:25.767257Z",
+    "platform" : "sentinel-1a",
+    "sar:observation_direction" : "right",
+    "sar:polarizations" : [ "VH", "VV" ],
+    "proj:epsg" : 4326,
+    "sar:instrument_mode" : "IW",
+    "instruments" : [ "c-sar" ],
+    "constellation" : "sentinel-1",
+    "sar:center_frequency" : 5.405,
+    "sar:product_type" : "RTC",
+    "sat:orbit_state" : "ascending",
+    "sat:absolute_orbit" : 34502,
+    "odc:region_code": "S08E036",
+    "odc:product": "s1_rtc",
+    "odc:processing_datetime": "2020-11-27T15:39:19.216Z"
+  },
+  "links" : [ {
+    "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_metadata.json",
+    "rel" : "self",
+    "type" : "application/json"
+  }, {
+    "href" : "s3://sentinel-s1-l1c/GRD/2020/9/24/IW/DV/S1A_IW_GRDH_1SDV_20200924T155435_20200924T155500_034502_0403DE_1C25",
+    "rel" : "derived_from"
+  }, {
+    "href" : "s3://sentinel-s1-l1c/GRD/2020/9/24/IW/DV/S1A_IW_GRDH_1SDV_20200924T155500_20200924T155525_034502_0403DE_4BF9",
+    "rel" : "derived_from"
+  } ],
+  "assets" : {
+    "area" : {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_AREA.tif",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_AREA",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "normalized scattering area",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 5000, 5000 ],
+      "proj:transform" : [ 0.0002, 0.0, 36.0, 0.0, -0.0002, -7.0 ]
+    },
+    "vv" : {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_VV.tif",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_VV",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "polarization VV",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 5000, 5000 ],
+      "proj:transform" : [ 0.0002, 0.0, 36.0, 0.0, -0.0002, -7.0 ],
+      "sar:polarizations" : [ "VV" ]
+    },
+    "vh" : {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_VH.tif",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_VH",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "polarization VH",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 5000, 5000 ],
+      "proj:transform" : [ 0.0002, 0.0, 36.0, 0.0, -0.0002, -7.0 ],
+      "sar:polarizations" : [ "VH" ]
+    },
+    "angle" : {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_ANGLE.tif",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_ANGLE",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "local incidence angle",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 5000, 5000 ],
+      "proj:transform" : [ 0.0002, 0.0, 36.0, 0.0, -0.0002, -7.0 ]
+    },
+    "mask" : {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_MASK.tif",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_MASK",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "data mask",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 5000, 5000 ],
+      "proj:transform" : [ 0.0002, 0.0, 36.0, 0.0, -0.0002, -7.0 ]
+    },
+    "metadata": {
+      "href" : "s3://deafrica-sentinel-1/s1_rtc/S08E036/2020/09/24/0403DE/s1_rtc_0403DE_S08E036_2020_09_24_metadata.xml",
+      "title" : "s1_rtc_0403DE_S08E036_2020_09_24_metadata",
+      "type" : "application/xml",
+      "roles": [ "metadata", "card4l" ]
+    }
+  }
+}

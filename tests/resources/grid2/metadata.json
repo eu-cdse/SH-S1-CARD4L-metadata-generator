@@ -1,0 +1,95 @@
+{
+  "stac_version" : "1.0.0-beta.2",
+  "id" : "36MZT_0_0_2021_08_14_04A19A",
+  "geometry" : {
+    "type" : "Polygon",
+    "coordinates" : [[[35.968910919347,-7.233338814197495],[36.63666086766966,-7.084888825444527],[36.630731826826135,-6.2873062256253744],[35.764046391120914,-6.29258761437133],[35.8078512375367,-6.508675769164443],[35.92264480250552,-7.05357261693687],[35.968910919347,-7.233338814197495]]]
+  },
+  "bbox" : [35.764046391120914,-7.233338814197495,36.63666086766966,-6.2873062256253744],
+  "stac_extensions" : [ "sat", "sar", "proj" ],
+  "type" : "Feature",
+  "properties" : {
+    "datetime" : "2021-08-14T15:55:04.713357Z",
+    "sar:frequency_band" : "C",
+    "sat:relative_orbit" : 130,
+    "start_datetime" : "2021-08-14T15:55:04.713357Z",
+    "end_datetime" : "2021-08-14T15:55:29.711802Z",
+    "platform" : "sentinel-1a",
+    "sar:observation_direction" : "right",
+    "sar:polarizations" : [ "VH", "VV" ],
+    "proj:epsg" : 32736,
+    "sar:instrument_mode" : "IW",
+    "instruments" : [ "c-sar" ],
+    "constellation" : "sentinel-1",
+    "sar:center_frequency" : 5.405,
+    "sar:product_type" : "RTC",
+    "sat:orbit_state" : "ascending",
+    "sat:absolute_orbit" : 39227,
+    "odc:region_code" : "36MZT_0_0",
+    "odc:product": "s1_rtc",
+    "odc:processing_datetime": "2020-11-27T15:39:19.216Z"
+  },
+  "links" : [ {
+    "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_metadata.json",
+    "rel" : "self",
+    "type" : "application/json"
+  }, {
+    "href" : "s3://sentinel-s1-l1c/GRD/2021/8/14/IW/DV/S1A_IW_GRDH_1SDV_20210814T155504_20210814T155529_039227_04A19A_23B3",
+    "rel" : "derived_from"
+  } ],
+  "assets" : {
+    "area" : {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_AREA.tif",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_AREA",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "normalized scattering area",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 288, 298 ],
+      "proj:transform" : [ 360.0, 0.0, 798180.0, 0.0, -360.0, 9303640.0 ]
+    },
+    "vv" : {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_VV.tif",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_VV",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "polarization VV",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 288, 298 ],
+      "proj:transform" : [ 360.0, 0.0, 798180.0, 0.0, -360.0, 9303640.0 ],
+      "sar:polarizations" : [ "VV" ]
+    },
+    "vh" : {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_VH.tif",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_VH",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "polarization VH",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 288, 298 ],
+      "proj:transform" : [ 360.0, 0.0, 798180.0, 0.0, -360.0, 9303640.0 ],
+      "sar:polarizations" : [ "VH" ]
+    },
+    "angle" : {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_ANGLE.tif",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_ANGLE",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "local incidence angle",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 288, 298 ],
+      "proj:transform" : [ 360.0, 0.0, 798180.0, 0.0, -360.0, 9303640.0 ]
+    },
+    "mask" : {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_MASK.tif",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_MASK",
+      "type" : "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description" : "data mask",
+      "roles" : [ "data" ],
+      "proj:shape" : [ 288, 298 ],
+      "proj:transform" : [ 360.0, 0.0, 798180.0, 0.0, -360.0, 9303640.0 ]
+    },
+    "metadata": {
+      "href" : "s3://deafrica-sentinel-1/card4l_grid2/s1_rtc/36MZT_0_0/2021/08/14/04A19A/s1_rtc_04A19A_36MZT_0_0_2021_08_14_metadata.xml",
+      "title" : "s1_rtc_04A19A_36MZT_0_0_2021_08_14_metadata",
+      "type" : "application/xml",
+      "roles": [ "metadata", "card4l" ]
+    }
+  }
+}
