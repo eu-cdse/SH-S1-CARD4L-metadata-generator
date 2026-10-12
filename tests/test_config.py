@@ -5,12 +5,12 @@ from __future__ import annotations
 import pytest
 
 from card4l_metadata.config import (
-    DEFAULT_BATCH_BASE_URI,
+    DEFAULT_BATCH_BASE_URL,
     Config,
 )
 
 _ENV = (
-    "BATCH_BASE_URI", "SH_TOKEN",
+    "BATCH_BASE_URL", "SH_TOKEN",
     "AWS_REGION", "AWS_DEFAULT_REGION", "S3_ENDPOINT",
 )
 
@@ -36,13 +36,13 @@ def test_no_token_configured():
     assert Config.from_env().sh_token is None
 
 
-def test_base_uri_defaults():
-    assert Config.from_env().batch_base_uri == DEFAULT_BATCH_BASE_URI
+def test_base_url_defaults():
+    assert Config.from_env().batch_base_url == DEFAULT_BATCH_BASE_URL
 
 
-def test_base_uris_from_env(monkeypatch):
-    monkeypatch.setenv("BATCH_BASE_URI", "https://batch.example/batch/v2/")
-    assert Config.from_env().batch_base_uri == "https://batch.example/batch/v2/"
+def test_base_urls_from_env(monkeypatch):
+    monkeypatch.setenv("BATCH_BASE_URL", "https://batch.example/batch/v2/")
+    assert Config.from_env().batch_base_url == "https://batch.example/batch/v2/"
 
 
 def test_region_falls_back_to_aws_default_region(monkeypatch):

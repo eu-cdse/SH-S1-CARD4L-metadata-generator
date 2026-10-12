@@ -26,10 +26,10 @@ _RETRYABLE_STATUS = {429} | set(range(500, 600))
 
 
 class BatchV2Client:
-    def __init__(self, base_uri: str, token: Optional[str] = None,
+    def __init__(self, base_url: str, token: Optional[str] = None,
                  session: Optional[requests.Session] = None):
         # Ensure a single trailing slash so urljoin-style concatenation is clean.
-        self._base_uri = base_uri.rstrip("/") + "/"
+        self._base_url = base_url.rstrip("/") + "/"
         self._session = session or requests.Session()
         self._headers = {
             "Accept": "application/json",
@@ -64,7 +64,7 @@ class BatchV2Client:
 
     def get_task(self, task_id: str) -> BatchProcessTaskDto:
         """GET /process/{taskId}."""
-        url = self._base_uri + _PROCESS_PATH + "/" + str(task_id)
+        url = self._base_url + _PROCESS_PATH + "/" + str(task_id)
         response = self._get_with_retry(url)
         if response.status_code != 200:
             raise RuntimeError(
@@ -74,7 +74,7 @@ class BatchV2Client:
 
     def get_grid_descriptor(self, tiling_grid_id) -> TilingGridDescriptorDto:
         """GET /tilinggrids/{id}."""
-        url = self._base_uri + _TILING_GRIDS_PATH + "/" + str(tiling_grid_id)
+        url = self._base_url + _TILING_GRIDS_PATH + "/" + str(tiling_grid_id)
         response = self._get_with_retry(url)
         if response.status_code != 200:
             raise RuntimeError(

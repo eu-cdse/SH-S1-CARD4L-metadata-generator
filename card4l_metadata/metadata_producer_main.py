@@ -7,7 +7,7 @@ JSON + XML metadata of every processed tile is written to a local directory.
 Usage:
     python -m card4l_metadata.metadata_producer_main --batch-task-id ID --output-dir ./out
 
-Endpoints and credentials come from the environment: BATCH_BASE_URI, SH_TOKEN,
+Endpoints and credentials come from the environment: BATCH_BASE_URL, SH_TOKEN,
 AWS_REGION / AWS_DEFAULT_REGION, S3_ENDPOINT (see ``config.py``), plus the
 optional S1_DATA_AWS_PROFILE for the Sentinel-1 source data bucket.
 """
@@ -76,7 +76,7 @@ def run(argv=None) -> int:
     # The Copernicus DEM coverage comes from the bundled WKT file.
     Copernicus10DemResolver.initialize()
 
-    batch_client = BatchV2Client(config.batch_base_uri, config.sh_token)
+    batch_client = BatchV2Client(config.batch_base_url, config.sh_token)
     try:
         producer = MetadataProducer(batch_client, s3, output_dir, s1data_s3=s1data_s3)
         producer.process(task)

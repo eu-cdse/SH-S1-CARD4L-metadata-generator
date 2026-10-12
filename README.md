@@ -30,7 +30,7 @@ apt install gdal-bin libgdal-dev python3-gdal
 
 | Environment variable    | Description                                        | Default                                        |
 |-------------------------|----------------------------------------------------|------------------------------------------------|
-| `BATCH_BASE_URI`        | Batch API base URI                                 | `https://services.sentinel-hub.com/batch/v2`   |
+| `BATCH_BASE_URL`        | Batch Processing API base URL                      | `https://sh.dataspace.copernicus.eu/batch/v2`  |
 | `SH_TOKEN`              | Sentinel Hub bearer token                          |                                                |
 | `AWS_ACCESS_KEY_ID`     | Access key for the Batch output bucket             |                                                |
 | `AWS_SECRET_ACCESS_KEY` | Secret key for the Batch output bucket             |                                                |
@@ -147,23 +147,27 @@ Generate CARD4L-compatible Batch request using the following template:
 }
 ```
 
-Submit the batch request to the Batch Processing API as described in the [Batch Processing API docs](https://docs.planet.com/develop/apis/batch-processing)
+Submit the batch request to the Batch Processing API as described in the [Batch Processing API docs](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/BatchV2.html)
 and save the task ID which is needed for running the metadata generator tool.
 
 ```
-POST https://services.sentinel-hub.com/batch/v2/process/
+POST <BATCH_BASE_URL>/process
 <batch request>
 ```
 
+where BATCH_BASE_URL is a base URL of the [Batch Processing API](https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/BatchV2.html), e.g.:
+- CDSE deployment: https://sh.dataspace.copernicus.eu/batch/v2
+- EU-Central-1 deployment: https://services.sentinel-hub.com/batch/v2
+
 Start the task:
 ```
-POST https://services.sentinel-hub.com/batch/v2/process/TASK_ID/start
+POST <BATCH_BASE_URL>/process/TASK_ID/start
 ```
 
 Before continuing, make sure that the batch task processing has finished successfully (status of the task is `DONE`).
 Status of the batch task can be retrieved using the following request:
 ```
-GET https://services.sentinel-hub.com/batch/v2/process/TASK_ID
+GET <BATCH_BASE_URL>/process/TASK_ID
 ```
 
 ## Generate CARD4L metadata for the specified batch task
